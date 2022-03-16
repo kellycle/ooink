@@ -1,0 +1,11 @@
+.container{
+    display: flex;
+    justify-content: space-around;
+}
+.form{
+    width: 40%;
+}
+.errors{
+    margin-top: 30px;
+    color: red;
+}

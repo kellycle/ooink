@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ooink Ramen | Order Complete</title>
+        {% load static %}
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="{% static 'css/online_order.css' %}">
+        <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+        <script src="static/js/script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white d-flex justify-content-center">
+            <div>
+                <a class="navbar-brand" href="/">
+                    <img class="resizing" src="{% static 'ooink_images/piglet.jpg' %}" alt="Ooink Piglet Image" height="60">
+                    <img src="{% static 'ooink_images/ooink.jpg' %}" alt="Ooink Logo">
+                </a>
+                <h2 class="text-center">Online Ordering</h2>
+            </div>
+        </nav>
+        <div class="d-flex justify-content-center container">
+            <div class="p-5 col-md-8 border">
+                <h3 class="border-bottom mb-4">Thank you for your business!</h3>
+                <p>You have ordered {{this_order.quantity_ordered}} item(s).</p>
+                <p class="mb-0">Here is your order:</p>
+                <ul>
+                    {% for key, value in order_dict.items %}
+                        <li>{{value}} {{key}}</li>
+                    {% endfor %}
+                </ul>
+                <p class="mb-0">We charged your credit card for ${{this_order.total_cost}}. Your order will be available for pick up in 20 minutes.</p>
+                <!-- <p>{{this_order.itemized_order}}</p> -->
+                <div class="overlay">
+                    <div class="text">Enjoy your meal!</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ooink Ramen</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/page_coming_soon.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <a class="navbar-brand" href="/">
+            <img src="{% static 'ooink_images/piglet.jpg' %}" alt="Ooink Piglet Image" height="60">
+            <img src="{% static 'ooink_images/ooink.jpg' %}" alt="Ooink Logo">
+        </a>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="about">ABOUT</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="press">PRESS</a>
+            </li>
+            <li>
+                <a class="nav-link" href="gallery">GALLERY</a>
+            </li>
+        </ul>
+        <a class="btn btn-outline-primary mb-2" href="/order">ORDER ONLINE</a>
+    </nav>
+    <main>
+        <p class="text-center soon_style">Page coming soon...</p>
+    </main>
+</body>
+</html>
